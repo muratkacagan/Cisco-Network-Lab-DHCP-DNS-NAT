@@ -6,9 +6,13 @@ Proje İçeriği ve Yapılandırmalar
 Bu topolojide adım adım aşağıdaki protokoller ve servisler yapılandırılmıştır:
 
 DHCP Konfigürasyonu: Yerel ağdaki (192.168.1.0) istemcilere otomatik IP dağıtımı.
+
 DHCP Relay (IP Helper): İki farklı ağ (Router) arasında DHCP yayınlarını iletme ve diğer ağdaki (192.168.2.0) istemciye IP aldırma.
+
 Statik Yönlendirme: İki farklı router'ın seri haberleşme arayüzleri (s2/0) üzerinden birbiriyle haberleşmesi (`ip route 0.0.0.0 0.0.0.0 s2/0`).
+
 DNS Sunucu Kurulumu: Yerel ağda İsim Çözümleme hizmeti yapılandırılarak `www.deney.com` alan adının bir HTTP sunucusuna (192.168.2.5) yönlendirilmesi.
+
 NAT (Network Address Translation): Yerel (Private) IP adresine sahip DNS sunucusunu (192.168.2.5) dışarıdan erişilebilir kılmak için Global (Public) IP adresine (20.0.0.1) dönüştürme işlemi (Static NAT).
 
 🛠️ Kullanılan Teknolojiler
